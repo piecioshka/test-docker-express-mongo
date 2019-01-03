@@ -1,0 +1,17 @@
+version: "3"
+services:
+    db:
+        ports:
+            - 27017:27017
+        build:
+            context: .
+            dockerfile: dockerfiles/mongo.Dockerfile
+
+    web:
+        ports:
+            - 3000:3000
+        build:
+            context: .
+            dockerfile: dockerfiles/node.Dockerfile
+        depends_on:
+            - db

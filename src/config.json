@@ -1,0 +1,9 @@
+{
+    "PORT": 3000,
+    "MONGO": {
+        "host": "172.17.0.3",
+        "host_not_working": "db",
+        "port": 27017,
+        "dbName": "myproject"
+    }
+}
