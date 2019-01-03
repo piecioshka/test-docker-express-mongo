@@ -1,8 +1,8 @@
 {
     "PORT": 3000,
     "MONGO": {
-        "host": "172.17.0.3",
-        "host_not_working": "db",
+        "host": "db",
+        "host_for_launch_without_docker": "localhost",
         "port": 27017,
         "dbName": "myproject"
     }

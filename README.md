@@ -33,14 +33,15 @@
     docker build -t piecioshka/demo:4 -f dockerfiles/node.Dockerfile .
     ```
 
-2. Start containers:
+2. Start containers with create own network:
 
     ```bash
-    docker run -it --rm -p 27017:27017 --name db piecioshka/demo:3
-    docker run -it --rm -p 3000:3000 --name web piecioshka/demo:4
+    docker network create my-private-network
+    docker run -it --rm -p 27017:27017 --network=my-private-network --name db piecioshka/demo:3
+    docker run -it --rm -p 3000:3000 --network=my-private-network --name web piecioshka/demo:4
     ```
 
-    or with docker-compose:
+    or with [docker-compose](https://docs.docker.com/compose/):
 
     ```bash
     docker-compose up
