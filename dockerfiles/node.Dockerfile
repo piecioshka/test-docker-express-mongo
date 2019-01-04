@@ -1,9 +1,10 @@
-FROM node:11
+FROM node:11.6.0-alpine
 
 WORKDIR /home/node/app
 
+COPY package.json .
+COPY package-lock.json .
+RUN npm install
 COPY . .
 
-RUN npm install
-
-CMD npm run dev
+CMD ["npm", "run", "dev"]

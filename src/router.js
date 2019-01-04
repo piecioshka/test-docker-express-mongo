@@ -22,7 +22,7 @@ router.get("/test", async (req, res) => {
         await mongoHelper.canConnect();
         res.json({
             status: "ok",
-            message: "connected"
+            message: "connected to database"
         });
     } catch (err) {
         res.status(500).json({
