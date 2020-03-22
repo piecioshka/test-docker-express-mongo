@@ -1,7 +1,5 @@
 # test-docker-express-mongo
 
-[![dependencies](https://david-dm.org/piecioshka/test-docker-express-mongo.svg)](https://github.com/piecioshka/test-docker-express-mongo)
-
 :ledger: Testing Docker with two apps: `HTTP server with Express.js` and `MongoDB`
 
 ## Features
